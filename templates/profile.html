@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>profil</title>
+    <link rel="stylesheet" href="/static/profile.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    {%include '_nav_reg.html' %}
+    <!-- <header class="header">
+        <a href="#" class="logo">Home</a>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#" class="active">Contact</a>
+        </nav>
+    </header> -->
+
+
+    <section class="home">
+                        {% if user.profile_picture == 'default.png' %}
+                    <img src="/profile-images/default.png" alt="Profile Picture" style="width: 400px; height: 400px; border-radius: 50px;"/>
+                {% else %}
+                    <img src="/profile-images/{{ user.profile_picture }}" alt="Profile Picture" style="width: 500px; height: 400px; border-radius: 50px;"/>
+                {% endif %}
+        <div class="home-content" style="padding-bottom: 100px; margin-left: 30px;">
+            <div class="home_info">
+                <h1>Profile</h1>
+
+                <div class="name"><h3>Your name: </h3> <h2>{{ user.username }}</h2></div>
+                <br>
+                <div class="email"><h3>Your email: </h3> <h2>{{ user.email }}</h2></div>
+                <br>
+                <div class="pasword"><h3>Your password: </h3> <h2>{{ user.password }}</h2></div>
+            </div>
+            <div id="res"></div>
+
+        <div class="btn-box">
+            <a href="#" class="bt1" id="open_pop">set info</a>
+            <a href="#" class="bt2" onclick="closeLib()">close library</a>
+            <a href="#lib_all" class="bt3" onclick="openLib()">open library</a>
+        </div>
+        </div>
+
+        <!-- <div class="home-sci">
+            <a href="#" class=""><i class='bx bxl-discord-alt'></i></a>
+            <a href="#" class=""><i class='bx bxl-telegram'></i></a>
+            <a href="#" class=""><i class='bx bxl-facebook'></i></a>
+            <a href="#" class=""><i class='bx bxl-instagram'></i></a>
+        </div>
+         -->
+    </section>
+
+    <div class="popup" id="popup">
+        <div class="close-btn" id="close-btn">&times;</div>
+
+        <div class="form">
+            <form id="update-info" enctype="multipart/form-data">
+
+                <h2>Set info</h2>
+                <div class="form-element">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="{{ user.username }}" value="{{ user.username }}" style="width: auto;" name="username" id="username" oninput="profileHandler()">
+                </div>
+                <div class="form-element">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="{{ user.email }}" value="{{ user.email }}" style="width: auto;" name="email" id="email" oninput="profileHandler()">
+                </div>
+                <div class="form-element">
+                    <label for="password">Password:</label>
+                    <input type="text" id="password" placeholder="{{ user.password }}" value="{{ user.password }}" style="width: auto;" name="password" id="password" oninput="profileHandler()">
+                </div>
+                <div class="form-element">
+                    <div id="result_">
+                    <p class="italic_ps">all info will be automatically saved</p>
+                </div>                    
+                </div>
+
+                    
+            </form>
+
+
+        </div>
+    </div>
+    
+
+    
+    <div class="lib_all" id="lib_all">
+        <p class="krapka">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <h2 class="h2_lib">Your Library</h2>
+        <div class="library">
+            {% for game in lib %}
+                <div class="game-card">
+                    <img src="{{game.image_path}}" alt="Img Not Found" />
+                    <h3><a href="game?name={{game.name.lower()}}">{{game.name}}</a></h3>
+                    <p>{{game.description}}</p>
+                    <a href="#collapse">More Info</a>
+                    <form id="rem-from-lib">
+                        <input type="hidden" name="name" value="{{game.name}}"/>
+                        <button type="submit" id="rem-from-lib-btn" class="rem-from-lib-btn" onclick="removeFromLib()">Remove from Library</button>
+                    </form>
+                    <div id="res"></div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+<script src="static\profil.js"></script>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Already Logged In</title>
+    {% include "_head.html" %}
+</head>
+<body>
+    {%if reg == True %}
+        {% include "_nav_reg.html" %}
+    {% else %}
+        {% include "_nav_nreg.html" %}
+    {% endif %}
+    {% include "_categories.html" %}
+    <h1>You're Already Logged In</h1>
+    <p>You can't log in twice</p>
+    <a href="/">Go Home</a>
+</body>
+</html>

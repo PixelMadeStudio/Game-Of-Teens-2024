@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undertale Game Description</title>
+    {% include '_head.html' %}
+</head>
+<body>
+    {%if reg == True %}
+        {% include '_nav_reg.html' %}
+    {% else %}
+        {% include '_nav_nreg.html' %}
+    {% endif %}
+    {% include '_addtolib.html' %}
+    <div class="container">
+        <h1>Undertale</h1>
+        <img src="/gameicons/undertale.png" alt="Undertale" style="float: right; border-radius: 30px;" class="game-icon"/>
+        
+        <section>
+            <h2>General Information</h2>
+            <ul>
+                <li><strong>Developer:</strong> Toby Fox</li>
+                <li><strong>Publisher:</strong> Toby Fox</li>
+                <li><strong>Initial Release Date:</strong> September 15, 2015</li>
+                <li><strong>Platforms:</strong> PC, Mac, Linux, PlayStation 4, PlayStation Vita, Nintendo Switch</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Game Description</h2>
+            <p>Undertale is a critically acclaimed indie role-playing game created by developer Toby Fox. In this game, players control a human child who has fallen into the Underground, a large, secluded region under the surface of the Earth, separated by a magical barrier. The player navigates through this world filled with towns and caves, solving puzzles and battling monsters, all with the ultimate goal of returning to the surface.</p>
+        </section>
+
+        <section>
+            <h2>Gameplay</h2>
+            <p>Undertale features a unique blend of traditional RPG mechanics and innovative gameplay elements. Players can choose to confront enemies in battles or resolve conflicts peacefully. The choices made by the player significantly affect the story and its outcomes.</p>
+
+            <h3>Combat System</h3>
+            <p>The combat system combines turn-based mechanics with bullet-hell elements. Players can attack enemies, use items, or act in non-violent ways to resolve encounters. The "ACT" option allows players to interact with enemies in various ways to avoid combat.</p>
+
+            <h3>Choice and Consequence</h3>
+            <p>Every action in Undertale has consequences. The game tracks the player's decisions, leading to different storylines and endings. The main routes include the Neutral, Pacifist, and Genocide routes, each offering a unique experience.</p>
+        </section>
+
+        <section>
+            <h2>Characters</h2>
+            <ul>
+                <li><strong>Frisk:</strong> The main protagonist controlled by the player. Frisk's actions and choices determine the course of the game.</li>
+                <li><strong>Toriel:</strong> A motherly goat-like monster who acts as a guide and protector early in the game.</li>
+                <li><strong>Sans:</strong> A laid-back skeleton with a mysterious background, known for his jokes and puns.</li>
+                <li><strong>Papyrus:</strong> Sans's energetic and ambitious brother who dreams of joining the Royal Guard.</li>
+                <li><strong>Undyne:</strong> The head of the Royal Guard, known for her determination and combat skills.</li>
+                <li><strong>Alphys:</strong> The Royal Scientist who aids the player with information and gadgets.</li>
+                <li><strong>Flowey:</strong> A malevolent flower who serves as the main antagonist in several storylines.</li>
+                <li><strong>Asgore:</strong> The king of the Underground who seeks to break the barrier to the surface.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Story and Themes</h2>
+            <p>Undertale explores themes of choice, morality, and empathy. The game encourages players to consider the consequences of their actions and promotes non-violence and understanding. The story is rich with humor, emotion, and memorable characters, making it a standout title in indie gaming.</p>
+        </section>
+
+        <section>
+            <h2>Music</h2>
+            <p>The soundtrack, composed by Toby Fox, is a critical component of the game's success. The music ranges from upbeat and whimsical to intense and emotional, perfectly complementing the game's atmosphere and narrative. Iconic tracks include "Megalovania," "Hopes and Dreams," and "Undertale."</p>
+        </section>
+
+        <section>
+            <h2>Reception and Impact</h2>
+            <p>Undertale received widespread acclaim for its storytelling, unique gameplay, and soundtrack. It has garnered a dedicated fanbase and has significantly influenced the indie game scene. The game's success has led to numerous fan creations, including art, music, and even other games inspired by Undertale's mechanics and themes.</p>
+        </section>
+    </div>
+
+    {% include '_comments.html' %}
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara Secret Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .notread {
+            display: inline-block;
+            color: #000;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Capybara Mystery: Hidden Information</h1>
+
+        <p><strong>Part 1:</strong> To unlock this secret, you must <span class="notread">hack</span> the site or try to access a non-existent page. Only the most cunning will uncover the truth!</p>
+
+        <p><strong>Part 2:</strong> How to claim your prize? Reach <span class="notread">10000</span> points and you might just find yourself at the top! But be warned, the journey won't be easy.</p>
+    </div>
+
+    <script>
+        // Функція для генерування випадкового символу
+        function getRandomChar() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            return chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+
+        // Функція для заміни тексту у всіх елементах з класом 'notread'
+        function scrambleText() {
+            const notreadElements = document.querySelectorAll('.notread');
+
+            notreadElements.forEach(element => {
+                const originalText = element.textContent;
+                let scrambledText = '';
+
+                for (let i = 0; i < originalText.length; i++) {
+                    scrambledText += getRandomChar();
+                }
+
+                element.textContent = scrambledText;
+            });
+        }
+
+        // Викликаємо функцію кожні 100 мс для постійної зміни тексту
+        setInterval(scrambleText, 100);
+    </script>
+</body>
+</html>

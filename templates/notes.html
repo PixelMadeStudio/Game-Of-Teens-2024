@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% include '_head.html' %}
+</head>
+<body>
+    {% include '_nav_reg.html' %}
+    
+    <div class="container">
+        <h1>Notes</h1>
+        <form id="add-note">
+            <select name="game" id="game-dropdown">
+                {%for game in games: %}
+                <option value="{{game.name}}">{{game.name}}</option>
+                <!-- <input type="hidden" name="id" value="{{game.id}}"> -->
+                {% endfor %}
+            </select>
+            <button onclick="addNote()">Add note</button>
+        </form>
+        <input type="hidden" id="count" value="{{count}}">
+        {%for i in notes: %}
+            <form id="notes-form{{i.id}}" method="POST">
+                <div class="note">
+                    <h3>{{i.game}}</h3>
+                    <input type="hidden" name="id" id="{{i.id}}" value="{{i.id}}">
+                    
+                    <textarea name="note" oninput="notesHandler()">{%if i.note != None: %}{{i.note}}{%endif%}</textarea>
+                    <button type="submit">Delete Note</button> <!-- onclick="DelNotesHandler('{{i.id}}')"-->
+                </div>
+            </form>
+        {% endfor %}
+        {%if success: %}
+            <p class="text-success italic">{{success}}</p>
+        {% endif %}
+        <div id="result"></div>
+    </div>
+</body>
+</html>

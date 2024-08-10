@@ -1,0 +1,11 @@
+<div class="categories-bar">
+    {% set existing_categories = ['Action', 'Adventure', 'RPG'] %}
+    {% for index in range(existing_categories|length) %}
+        <div class="categories-bar-item">
+            <input type="checkbox" name="categories{{ index }}" oninput="searchHandler()">
+            <label>{{ existing_categories[index] }}</label>
+        
+        </div>
+    {% endfor %}
+    
+</div>

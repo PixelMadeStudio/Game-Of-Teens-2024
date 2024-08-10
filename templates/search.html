@@ -1,0 +1,12 @@
+<!-- <p>{{games}}</p> -->
+
+<div class="search-results">
+    {% for game in games['games'] %}
+        <div class="game-card">
+            <a href="game?name={{game.name.lower()}}"><img src="{{game.image_path}}" alt="Img Not Found" /></a>
+            <h3><a href="game?name={{game.name.lower()}}" class="game-title">{{game.name}}</a></h3>
+            <p>{{game.description}}</p>
+            <a href="#collapse">More Info</a>
+        </div>
+    {% endfor %}
+</div>

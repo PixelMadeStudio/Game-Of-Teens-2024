@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raid: Shadow Legends Game Description</title>
+    {% include '_head.html' %}
+</head>
+<body>
+    {%if reg == True %}
+        {% include '_nav_reg.html' %}
+    {% else %}
+        {% include '_nav_nreg.html' %}
+    {% endif %}
+    {% include '_addtolib.html' %}
+    <div class="container">
+        <h1>Raid: Shadow Legends</h1>
+        <img src="/gameicons/raidshadowlegends.png" alt="Raid: Shadow Legends" style="float: right; border-radius: 30px;" class="game-icon"/>
+        
+        <section>
+            <h2>General Information</h2>
+            <ul>
+                <li><strong>Developer:</strong> Plarium Games</li>
+                <li><strong>Publisher:</strong> Plarium Games</li>
+                <li><strong>Initial Release Date:</strong> March 1, 2018</li>
+                <li><strong>Platforms:</strong> iOS, Android, PC</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Game Description</h2>
+            <p>Raid: Shadow Legends is a free-to-play fantasy role-playing game with turn-based combat. Players collect and upgrade champions from different factions, each with unique abilities and roles. The game features a campaign mode, dungeons, PvP battles, and clan activities.</p>
+        </section>
+
+        <section>
+            <h2>Gameplay</h2>
+            <p>Raid: Shadow Legends combines strategic gameplay with RPG elements. Players assemble teams of champions, each with distinct skills and roles, to battle AI-controlled enemies and other players in various game modes.</p>
+
+            <h3>Champion Collection and Customization</h3>
+            <p>Players collect hundreds of champions from different factions, each with their own strengths, weaknesses, and abilities. Champions can be leveled up, equipped with gear, and upgraded to enhance their effectiveness in battle.</p>
+
+            <h3>Campaign and PvE Content</h3>
+            <p>The game offers a story-driven campaign mode where players explore different regions, battle enemies, and uncover lore. Additionally, there are dungeons with challenging bosses and special events that provide rewards.</p>
+
+            <h3>PvP Arena and Clan Activities</h3>
+            <p>Players can compete against each other in the PvP Arena to earn rankings and rewards. The game also features clan activities such as clan boss battles and tournaments where clans compete for prizes.</p>
+        </section>
+
+        <section>
+            <h2>Monetization Model</h2>
+            <p>Raid: Shadow Legends is free-to-play with optional in-game purchases. Players can purchase virtual currency and items to speed up progression or acquire cosmetic and convenience items.</p>
+        </section>
+
+        <section>
+            <h2>Reception and Impact</h2>
+            <p>Raid: Shadow Legends has gained popularity for its accessible gameplay, extensive champion roster, and ongoing content updates. It has a large community of players and content creators who discuss strategies, tips, and game updates.</p>
+        </section>
+    </div>
+
+    {% include '_comments.html' %}
+</body>
+</html>

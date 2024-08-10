@@ -1,0 +1,117 @@
+<form id="comments-form">
+    <input type="hidden" name="name" value="{{game.name}}"/>
+    <input type="text" placeholder="Write your comment here" name="comment"/>
+    <div class="home-content">
+        <div class="btn-box">
+    <button type="submit" class="bt3">Send</button>
+</div>
+</div>
+</form>
+<div id="comments-result"></div>
+<div class="comments">
+    {% for comment in comments[::-1]: %}
+        <div class="comment" style="height: auto;">
+            <div class="comment-author">
+                
+                {% if comment.profile_picture == 'default.png' %}
+                    <a href="profile/view/{{comment.username}}"><img src="/profile-images/{{comment.profile_picture}}" alt="{{comment.username}}" style="width: 20px; height: 20px; border-radius: 50px;"/></a>
+                    <a href="profile/view/{{comment.username}}"><p>{{comment.username}}</p></a>
+                {% else %}
+                    <div style="display:flex; flex: row;">
+                        <a href="profile/view/{{comment.username}}"><img src="/profile-images/{{comment.profile_picture}}" alt="{{comment.username}}" style="width: 100px; height: 60px; border-radius: 50px;"/></a>
+                        <a href="profile/view/{{comment.username}}"><p>{{comment.username}}</p></a>
+                    </div>
+                {% endif %}
+                </div>
+            
+            <p class="italic comment-text">{{comment.comment}}</p>
+            <p class="comment-added">{{comment.date}} | {{comment.time}}</p>
+        </div>
+    {% endfor %}
+</div>
+
+<style>
+    .italic {
+        font-style: italic;
+    }
+    .comment-added {
+        color: rgb(2, 64, 2);
+        font-size: 0.8em;
+    }
+
+
+
+    
+    .home-content .btn-box {
+
+        display: flex;
+        justify-content: space-between;
+        width: 667px;
+        height: 45px;
+    }
+
+    .home-content .btn-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 1.74s;
+    }
+
+    .btn-box button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 100%;
+        background: #0813ac;
+        border: 2px solid #0813ac;
+        border-radius: 8px;
+        font-size: 15px;
+        color: #081b29;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        overflow: hidden;
+        transition: .4s;
+        z-index: 1;
+    }
+
+    .btn-box button:hover {
+        color: #0813ac;
+    }
+
+    .btn-box button.bt3 {
+        background: transparent;
+        color: #0813ac;
+    }
+
+    .btn-box button.bt3:hover {
+        color: #081b29;
+    }
+
+    .btn-box button.bt3::before {
+        background: #0813ac;
+    }
+
+    .btn-box button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #081b29;
+        z-index: -1;
+        transition: .4s;
+    }
+
+    .btn-box button:hover::before {
+        width: 100%;
+    }
+</style>

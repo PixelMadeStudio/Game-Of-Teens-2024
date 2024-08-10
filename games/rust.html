@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust Game Description</title>
+    {% include '_head.html' %}
+</head>
+<body>
+    {%if reg == True %}
+        {% include '_nav_reg.html' %}
+    {% else %}
+        {% include '_nav_nreg.html' %}
+    {% endif %}
+    {% include '_addtolib.html' %}
+    <div class="container">
+        <h1>Rust</h1>
+        <img src="/gameicons/rust.png" alt="Rust" style="float: right; border-radius: 30px;" class="game-icon"/>
+        
+        <section>
+            <h2>General Information</h2>
+            <ul>
+                <li><strong>Developer:</strong> Facepunch Studios</li>
+                <li><strong>Publisher:</strong> Facepunch Studios</li>
+                <li><strong>Initial Release Date:</strong> December 11, 2013 (Early Access)</li>
+                <li><strong>Platforms:</strong> PC, Mac, Linux, PlayStation 4, Xbox One</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Game Description</h2>
+            <p>Rust is a multiplayer survival game where players must survive in a harsh open world environment. Starting with only a rock and a torch, players must gather resources, craft tools, and build bases to protect themselves from other players and environmental threats.</p>
+        </section>
+
+        <section>
+            <h2>Gameplay</h2>
+            <p>Rust features a realistic survival experience with elements such as hunger, thirst, and cold. Players can hunt animals, gather resources like wood and metal, and engage in player versus player (PvP) combat. The game emphasizes player interaction and emergent gameplay.</p>
+
+            <h3>Base Building</h3>
+            <p>Players can construct bases using materials gathered from the environment. Bases can be fortified with walls, doors, traps, and other defensive structures to protect against raids by other players.</p>
+
+            <h3>Progression and Persistence</h3>
+            <p>Rust has a persistent world where players can accumulate resources and items over time. Servers may have varying rulesets and wipe schedules, influencing gameplay and progression.</p>
+        </section>
+
+        <section>
+            <h2>Multiplayer</h2>
+            <p>Rust is primarily a multiplayer game where players can join servers with different sizes and rulesets. Interaction with other players ranges from cooperation to competition and conflict, often leading to intense social dynamics and alliances.</p>
+        </section>
+
+        <section>
+            <h2>Reception and Impact</h2>
+            <p>Rust has received positive reception for its challenging gameplay, deep mechanics, and player-driven narratives. It has a dedicated player base and continues to receive updates and expansions, maintaining its popularity in the survival genre.</p>
+        </section>
+    </div>
+
+    {% include '_comments.html' %}
+</body>
+</html>

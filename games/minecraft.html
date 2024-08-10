@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{game.name}}</title>
+    {% include '_head.html' %}
+    
+</head>
+<body>
+    {%if reg == True %}
+        {% include '_nav_reg.html' %}
+    {% else %}
+        {% include '_nav_nreg.html' %}
+    {% endif %}
+    {% include '_addtolib.html' %}
+    <div class="container">
+        
+        <h1>{{game.name}}</h1>
+        <img src="{{game.image_path}}" alt="minecraft" style="float: right; border-radius: 30px;" class="game-icon"/>
+        <p>{{game.description}}</p>
+        <section>
+            <h2>General Information</h2>
+            <ul>
+                <li><strong>Developer:</strong> Mojang Studios</li>
+                <li><strong>Publisher:</strong> Mojang Studios, Xbox Game Studios</li>
+                <li><strong>Initial Release Date:</strong> November 18, 2011</li>
+                <li><strong>Platforms:</strong> PC, Mac, Linux, iOS, Android, Xbox, PlayStation, Nintendo Switch, and more.</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Game Description</h2>
+            <p>Minecraft is a sandbox video game that allows players to explore a blocky, procedurally generated 3D world with virtually infinite terrain. Players can discover and extract raw materials, craft tools and items, and build structures or earthworks. Depending on the game mode, players can also fight computer-controlled "mobs," as well as cooperate with or compete against other players in the same world.</p>
+        </section>
+    
+        <section>
+            <h2>Gameplay Modes</h2>
+            <ol>
+                <li>
+                    <h3>Survival Mode</h3>
+                    <p>Players must acquire resources to build the world and maintain health. Features a health bar and hunger mechanics. The goal is to survive against monsters and environmental hazards.</p>
+                </li>
+                <li>
+                    <h3>Creative Mode</h3>
+                    <p>Players have unlimited resources to build with and the ability to fly. No health or hunger bars, making it a peaceful and non-survival experience. Used for creating large builds or experimenting with game mechanics.</p>
+                </li>
+                <li>
+                    <h3>Adventure Mode</h3>
+                    <p>Players can interact with objects (like levers and buttons) but can't destroy blocks. Often used for custom maps and adventures designed by other players.</p>
+                </li>
+                <li>
+                    <h3>Spectator Mode</h3>
+                    <p>Players can fly through blocks and observe the game without directly interacting. Useful for watching other players or exploring worlds without interference.</p>
+                </li>
+                <li>
+                    <h3>Hardcore Mode</h3>
+                    <p>Similar to Survival Mode, but with the highest difficulty setting and permadeath. If a player dies, the world is deleted or locked to spectate mode.</p>
+                </li>
+            </ol>
+        </section>
+    
+        <section>
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Blocks:</strong> The fundamental building units of Minecraft, including different types of blocks like dirt, stone, ores, wood, and more. Each block type has unique properties and uses.</li>
+                <li><strong>Crafting:</strong> Players can combine materials in a crafting grid to create tools, weapons, armor, and other items. Recipes must be learned or discovered, and more advanced items require a crafting table.</li>
+                <li><strong>Mining and Resources:</strong> Essential part of gameplay, where players dig underground to find valuable resources like coal, iron, gold, diamonds, and more. Resources are used for crafting and building.</li>
+                <li><strong>Building:</strong> Players can place blocks to create structures, from simple homes to elaborate castles or complex machines. Redstone mechanics allow for the creation of electrical circuits and devices.</li>
+                <li><strong>Mobs:</strong> Various creatures populate the world, including passive animals like cows and pigs, hostile monsters like zombies and creepers, and neutral entities like endermen. Each mob has unique behaviors and drops items upon defeat.</li>
+                <li><strong>Biomes:</strong> The world is divided into different biomes, each with its own climate, terrain, and unique features. Examples include forests, deserts, mountains, oceans, and more.</li>
+                <li><strong>Multiplayer:</strong> Players can join servers to play with others, either cooperatively or competitively. Servers offer various game modes, custom mini-games, and community-created content.</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Updates and Expansions</h2>
+            <p>Minecraft receives regular updates that add new features, fix bugs, and enhance gameplay. Notable updates include the Nether Update, which revamped the Nether dimension, and the Caves & Cliffs Update, which added new cave and mountain generation, biomes, and mobs.</p>
+        </section>
+    
+        <section>
+            <h2>Cultural Impact</h2>
+            <p>Minecraft has had a significant cultural impact since its release, influencing numerous aspects of popular culture, education, and other games. It has a vibrant community of players, modders, and content creators. The game is used in educational settings to teach subjects like mathematics, history, and computer programming.</p>
+        </section>
+    
+        <section>
+            <h2>Spin-offs and Related Games</h2>
+            <ul>
+                <li><strong>Minecraft: Story Mode:</strong> A narrative-driven episodic game developed by Telltale Games.</li>
+                <li><strong>Minecraft Dungeons:</strong> An action-adventure dungeon crawler game.</li>
+                <li><strong>Minecraft Earth:</strong> An augmented reality game for mobile devices.</li>
+            </ul>
+        </section>
+    
+        <footer>
+            <p>© 2024 Minecraft Wiki. This page is not affiliated with Mojang Studios.</p>
+        </footer>
+        
+    </div>
+
+    <p style="color: bisque;">PS. If you want to see crafting recipes, click <<a href="https://www.minecraftcrafting.info/" style="color: white;">here</a>></p>
+
+    {% include '_comments.html' %}
+    
+</body>
+</html>

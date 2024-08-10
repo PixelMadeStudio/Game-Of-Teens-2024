@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ooops!</title>
+    {% include "_head.html" %}
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        canvas {
+          display: block;
+        }
+      </style>
+    </head>
+</head>
+<body>
+    {%if reg == True %}
+        {% include "_nav_reg.html" %}
+    {% else %}
+        {% include "_nav_nreg.html" %}
+    {% endif %}
+
+    <h1>Ooops!</h1>
+    <h2>There's nothing here (or the link has expired)</h2>
+    <p>Page not found</p>
+    <a href="/">Go Home</a>
+    {%include "_happybara.html" %}
+
+    <body>
+      
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Dino Replica</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+      height: 253px;
+      width: 1000px;
+      margin-left: 150px;
+      margin-bottom: 100px;
+      position: absolute;
+    }
+    #bg, #bg2 {
+      border: 2px solid #ffffff;
+      border-radius: 50px;
+      background-image: url(/capybara/background.jpg);
+      background-repeat: repeat-x;
+      background-size: cover;
+      /* width: 1000px; */
+      height: 296px;
+      /* margin-top: 50px; */
+    }
+
+    #bg2 {
+       border: 2px solid #ffffff;
+       border-radius: 50px;
+      margin-left: 100vw;}
+      
+    #start_btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;}
+
+  </style>
+</head>
+<body>
+  <form id="form123"><input type="hidden" name="id" id="id" value="{{id}}"></form>
+    <h2>!!!But, you<i onclick="Show_goal()" style="cursor: pointer;"> </i>can play<i onclick="Show_goal()" style="cursor: pointer;"> </i>HAPPYBARA!!!</h2>
+    <div id="bg">
+    <canvas id="game" width="1000" height="296"></canvas></div>
+    <div id="bg2"></div>
+    <script src="static\happyBara.js"></script>
+
+    <button onclick="Restart()" id="start_btn">Start Game</button>
+</body>
+</html>

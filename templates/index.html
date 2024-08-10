@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHP | Main Page</title>
+    
+</head>
+<body>
+<form id="FORM">
+    {%if reg == True %}
+        {% include "_nav_reg.html" %}
+    {% else %}
+        {% include "_nav_nreg.html" %}
+    {% endif %}
+    {% include "_categories.html" %}
+    <div class="games all" id="result">
+    
+        <h1 class="title">GameHP</h1>
+        <div></div>
+        <!-- <h4 class='opis' style="display: inline-block;">Ласкаво просимо на GameHP - ваш незамінний помічник у світі відеоігор! Наш сайт створений, щоб зробити ваше ігрове життя простішим. Завдяки зручному інтерфейсу та можливості створювати нотатки, ви завжди матимете під рукою всю необхідну інформацію про улюблені ігри. Не забувайте про <p class="notread">монстрів</p>... Пориньте у світ ігор з GameHP і грайте на максимум!</h4> -->
+        <h4 class='opis' style="display: inline-block;">Welcome to GameHP - your indispensable companion in the world of video games! Our website is designed to make your gaming life easier. With a user-friendly interface and the ability to create notes, you'll always have all the information you need about your favorite games at your fingertips. Don't forget about the <p class="notread">monsters</p>... Dive into the world of gaming with GameHP and play to the max!</h4>
+
+        <h6>Try To Search For Games using the Search Bar Above</h6>
+        <!-- Search results will be displayed here -->
+
+
+
+            <!-- ALL THE MAIN CODE -->
+
+
+        
+        <div class="contact-info"></div>
+    </div>
+
+    {% include "_head.html" %}
+    <style>
+        #myst {
+            color: hsl(250, 21%, 23%);
+        }
+        #myst-checkbox {
+            background-color: #4caf50;
+            border-color: #4caf50;
+            /* -webkit-appearance: none;
+            /* -moz-appearance: none; */ 
+            /* visibility: collapse; */
+            /* display: none; */
+            cursor: pointer;
+            background-color: transparent;
+            outline: none;
+            /* border: none; */
+            /* background-color: hsl(0, 0%, 100%); */
+            /* color: transparent; */
+            /* position: absolute; */
+            /* z-index: -1; */
+        }
+
+        #myst-checkbox:checked {
+            background-color: #ccc;
+        }
+
+        #myst:hover ~ #myst-checkbox {
+            display: block;}
+        .hidden {
+            margin-left: 1200px;
+            margin-top: 500px;
+            /* position: right; */
+        }
+
+        .happybara-card {
+            display: inline-flex;
+            animation: fadeIn 0.5s;
+        }
+
+    </style>
+    <form id="mystery">
+        <div class="hidden">
+            <input type="checkbox" name="myst-checkbox" id="myst-checkbox" oninput="mystHandler()">
+            <label for="myst" id="myst">mystery</label>
+        </div>
+    </form>
+    <script>
+        // Функція для генерування випадкового символу
+        function getRandomChar() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            return chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+    
+        // Функція для заміни тексту у всіх елементах з класом 'notread'
+        function scrambleText() {
+            const notreadElements = document.querySelectorAll('.notread');
+    
+            notreadElements.forEach(element => {
+                const originalText = element.textContent;
+                let scrambledText = '';
+    
+                for (let i = 0; i < originalText.length; i++) {
+                    scrambledText += getRandomChar();
+                }
+    
+                element.textContent = scrambledText;
+            });
+        }
+    
+        // Викликаємо функцію кожні 100 мс для постійної зміни тексту
+        setInterval(scrambleText, 10);
+    </script>
+</form>
+</body>
+</html>
+ 
