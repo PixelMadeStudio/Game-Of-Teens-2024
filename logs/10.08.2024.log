@@ -7055,3 +7055,10 @@ INFO:werkzeug:127.0.0.1 - - [10/Aug/2024 18:00:14] "[36mGET /images/logo.png HT
 INFO:werkzeug:127.0.0.1 - - [10/Aug/2024 18:00:14] "[36mGET /gameicons/minecraft.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [10/Aug/2024 18:00:14] "[36mGET /profile-images/CAPYBARA.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [10/Aug/2024 18:00:14] "[36mGET /images/background.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2024 18:00:29] "GET /profile/view/DregoScat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2024 18:00:29] "[33mGET /profile/view/static/profil.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2024 18:00:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2024 18:00:30] "[36mGET /static/profile.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2024 18:00:30] "[36mGET /images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2024 18:00:30] "[36mGET /profile-images/CAPYBARA.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2024 18:00:30] "[36mGET /static/man.jpg HTTP/1.1[0m" 304 -
