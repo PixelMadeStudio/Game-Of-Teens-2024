@@ -1,9 +1,11 @@
 <form id="comments-form">
+    <div class="lin">
     <input type="hidden" name="name" value="{{game.name}}"/>
     <input type="text" placeholder="Write your comment here" name="comment"/>
-    <div class="home-content">
-        <div class="btn-box">
+    <div class="home-content2">
+        <div class="btn-box2">
     <button type="submit" class="bt3">Send</button>
+</div>
 </div>
 </div>
 </form>
@@ -40,19 +42,25 @@
     }
 
 
-    .home-content .btn-box .mr button{
-        margin-left: 115px; margin-top: 30px; margin-bottom: 30px;
+    /* .home-content .btn-box .mr button{
     }
-    
-    .home-content .btn-box {
+     */
 
+    .lin{
+        margin-left:16px;
+        display: inline
+    }
+
+    .home-content2 .btn-box2 {
+        margin-left:15px;
+        margin-top: 10px;        
         display: flex;
         justify-content: space-between;
-        width: 667px;
+        width: 650px;
         height: 45px;
     }
 
-    .home-content .btn-box::before {
+    .home-content2 .btn-box2::before {
         content: '';
         position: absolute;
         top: 0;
@@ -64,7 +72,7 @@
         animation-delay: 1.74s;
     }
 
-    .btn-box button {
+    .btn-box2 button {
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -84,24 +92,24 @@
         z-index: 1;
     }
 
-    .btn-box button:hover {
+    .btn-box2 button:hover {
         color: #0813ac;
     }
 
-    .btn-box button.bt3 {
+    .btn-box2 button.bt3 {
         background: transparent;
         color: #0813ac;
     }
 
-    .btn-box button.bt3:hover {
+    .btn-box2 button.bt3:hover {
         color: #081b29;
     }
 
-    .btn-box button.bt3::before {
+    .btn-box2 button.bt3::before {
         background: #0813ac;
     }
 
-    .btn-box button::before {
+    .btn-box2 button::before {
         content: '';
         position: absolute;
         top: 0;
@@ -113,7 +121,7 @@
         transition: .4s;
     }
 
-    .btn-box button:hover::before {
+    .btn-box2 button:hover::before {
         width: 100%;
     }
 </style>

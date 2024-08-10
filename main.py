@@ -221,8 +221,8 @@ def newUser(email, username, password, private, profile_picture):
 
 def newComment(game, username, comment, profile_picture):
     with Session() as session:
-        date = datetime.datetime.now().strftime("%d.%m.%Y")
-        time = datetime.datetime.now().strftime("%H:%M:%S")
+        date = datetime.now().strftime("%d.%m.%Y")
+        time = datetime.now().strftime("%H:%M:%S")
         new_comment = Comment(game=game, username=username, date=date, time=time, comment=comment, profile_picture=profile_picture)
         session.add(new_comment)
         session.commit()
@@ -698,7 +698,7 @@ def comments():
             </div>
             
             <p class="italic comment-text">{request.form.get('comment')}</p>
-            <p class="comment-added">{datetime.datetime.now().strftime("%d.%m.%Y")} | {datetime.datetime.now().strftime("%H:%M:%S")}</p>
+            <p class="comment-added">{datetime.now().strftime("%d.%m.%Y")} | {datetime.now().strftime("%H:%M:%S")}</p>
         </div>
                         <p class="text-success italic">Successfully added comment</p>'''})
     else:

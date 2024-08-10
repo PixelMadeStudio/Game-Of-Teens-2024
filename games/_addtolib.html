@@ -2,9 +2,7 @@
     <input type="hidden" name="name" value="{{game.name}}"/>
     <div class="home-content">
         <div class="btn-box">
-            <div class="mr">
-            <button type="submit" class="bt3">Add to Library</button>
-            </div>
+            <button type="submit" class="bt4"">Add to Library</button>
         </div>
     </div>
 </form>
@@ -14,4 +12,80 @@
         color: white;
     }
 
+    .home-content .btn-box {
+        margin-left: 115px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        width: 667px;
+        height: 45px;
+    }
+
+    .home-content .btn-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 1.74s;
+    }
+
+    .btn-box button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 100%;
+        background: #00abf0;
+        border: 2px solid #00abf0;
+        border-radius: 8px;
+        font-size: 15px;
+        color: #081b29;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        overflow: hidden;
+        transition: .4s;
+        z-index: 1;
+    }
+
+    .btn-box button:hover {
+        color: #00abf0;
+    }
+
+    .btn-box button.bt3 {
+        background: transparent;
+        color: #00abf0;
+    }
+
+    .btn-box button.bt3:hover {
+        color: #081b29;
+    }
+
+    .btn-box button.bt3::before {
+        background: #00abf0;
+    }
+
+    .btn-box button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #081b29;
+        z-index: -1;
+        transition: .4s;
+    }
+
+    .btn-box button:hover::before {
+        width: 100%;
+    }
 </style>
+
+<div id="result"></div>
